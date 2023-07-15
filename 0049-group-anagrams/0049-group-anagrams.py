@@ -12,6 +12,6 @@ class Solution:
                 key[char_idx] += 1
             hashmap[str(key)].append(strng)
             
-        return [value for value in hashmap.values()]
+        return hashmap.values()
             
         
