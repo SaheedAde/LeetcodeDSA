@@ -5,10 +5,6 @@ class Solution:
             composite = target - num
             if composite in composites:
                 composite_idx = composites[composite]
-                # if idx == composite_idx:
-                #     continue
-                ans = [idx, composite_idx]
-                ans.sort()
-                return ans
+                return [idx, composite_idx] if idx < composite_idx else [composite_idx, idx]
             composites[num] = idx
         return []
