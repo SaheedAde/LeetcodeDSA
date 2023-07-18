@@ -2,6 +2,7 @@ class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
         parenth_pairs = {'{': '}', '(': ')', '[': ']'}
+        
         for p in s:
             if p in parenth_pairs:
                 stack.append(p)
