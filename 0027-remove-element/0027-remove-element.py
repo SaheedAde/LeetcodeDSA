@@ -32,10 +32,7 @@ class Solution:
             if current_el != val:
                 nums[available_idx] = current_el
                 available_idx += 1
-                running_idx += 1
-                continue
 
             running_idx += 1
-            continue
 
         return available_idx
