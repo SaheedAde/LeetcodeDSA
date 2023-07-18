@@ -1,21 +1,16 @@
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        i = 1
-        unique_count = 1
-        last_seen = nums[0]
-        while i <= len(nums) - 1:
-            curr = nums[i]
-            if curr == last_seen:
-                nums[i] = float(inf)
-            else:
-                last_seen = curr
-                unique_count += 1
+        r_idx = 1 # scanning through ptr
+        l_idx = 1 # Available location ptr
+        while r_idx < len(nums):
+            current_element = nums[r_idx]
+            previous_element = nums[r_idx - 1]
+            is_duplicate = current_element == previous_element
+            if not is_duplicate:
+                # Put current element in the available idx and shift both available location and current index
+                nums[l_idx] = current_element
+                l_idx += 1
 
-            i += 1 
-        
-        nums.sort()
+            r_idx += 1
             
-        return unique_count
-                
-        
-        
+        return l_idx
