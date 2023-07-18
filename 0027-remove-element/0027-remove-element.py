@@ -35,8 +35,7 @@ class Solution:
                 running_idx += 1
                 continue
 
-            if current_el == val:
-                running_idx += 1
-                continue
+            running_idx += 1
+            continue
 
         return available_idx
