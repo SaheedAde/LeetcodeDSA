@@ -5,9 +5,12 @@ class Solution:
         while running_idx < len(nums):
             current_el = nums[running_idx]
             if current_el != val:
-                if available_idx is not None:
-                    nums[available_idx] = current_el
-                    available_idx += 1
+                if available_idx is None:
+                    running_idx += 1
+                    continue
+
+                nums[available_idx] = current_el
+                available_idx += 1
                 running_idx += 1
                 continue
 
