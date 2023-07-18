@@ -4,6 +4,7 @@ class Solution:
         available_idx = None
         while running_idx < len(nums):
             current_el = nums[running_idx]
+            
             if current_el != val:
                 if available_idx is None:
                     running_idx += 1
