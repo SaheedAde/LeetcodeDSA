@@ -14,11 +14,7 @@ class Solution:
             if current_el == val:
                 if available_idx is None:
                     available_idx = running_idx
-                    running_idx += 1
-                    continue
-                else:
-                    running_idx += 1
-                    continue
-                    
-        print(nums, available_idx)
+                running_idx += 1
+                continue
+
         return available_idx
