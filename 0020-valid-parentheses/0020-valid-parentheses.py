@@ -15,8 +15,5 @@ class Solution:
             if parenth_pairs[last_open_p] != p:
                 return False
             
-        if stack:
-            return False
-            
-        return True
+        return True if not stack else False
         
