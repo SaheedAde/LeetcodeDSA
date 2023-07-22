@@ -1,0 +1,1 @@
+Always keep a pointer to the head and the tail
