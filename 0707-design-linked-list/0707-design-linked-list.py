@@ -35,8 +35,7 @@ class MyLinkedList:
         
         # point current tail to new_node
         cur.next = new_node
-        
-        self.display()
+
         
     def addAtIndex(self, index: int, val: int) -> None:
         if index == 0:
